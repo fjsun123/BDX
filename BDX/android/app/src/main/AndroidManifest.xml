@@ -10,7 +10,9 @@
       android:icon="@mipmap/ic_launcher"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
-
+        <meta-data
+                android:name="com.amap.api.v2.apikey"
+                android:value="50a7edbef2648484753f58b05d564008" />
 
       <activity
         android:name=".MainActivity"
