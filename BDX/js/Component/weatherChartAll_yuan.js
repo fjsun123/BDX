@@ -9,7 +9,7 @@ import {
 
 import Echarts from 'native-echarts';
 
-export default class weatherChartAll_yuan extends Component {
+export default class WeatherChartAll_yuan extends Component {
 
     render() {
         const option =  {

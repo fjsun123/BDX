@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import Echarts from 'native-echarts';
-export default class weatherChart extends Component<Props> {
+export default class WeatherChart extends Component {
     render() {
         const option = {
             title : {
@@ -22,7 +22,6 @@ export default class weatherChart extends Component<Props> {
                     fontSize: 7,
                 }
             },
-
 
             series: [
                 {
@@ -63,7 +62,14 @@ export default class weatherChart extends Component<Props> {
             ]
         };
         return (
-            <Echarts option={option} height={150} width={150} />
+                <Echarts option={option} height={150} width={150} />
         );
     }
 }
+const styles = StyleSheet.create({
+    container: {
+        flex:1,
+    },
+
+
+});

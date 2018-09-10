@@ -10,7 +10,7 @@ import {
 import Echarts from 'native-echarts';
 const { width, height } = Dimensions.get('window');
 
-export default class weatherChartAll_b extends Component {
+export default class WeatherChartAll_b extends Component {
 
     render() {
         const option = {
@@ -93,9 +93,9 @@ export default class weatherChartAll_b extends Component {
             ]
         };
         return (
-
+            <View  >
                 <Echarts option={option} height={150} width={Dimensions.get('window').width} />
-
+            </View>
         );
     }
 }

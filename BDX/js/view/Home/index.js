@@ -13,28 +13,24 @@ import {
 } from 'react-native';
 
 import ParallaxView from 'react-native-parallax-view';
-
+import WeatherChart from "../../Component/weatherChart";
 import CarouselExample from "../../Component/CarouselMap";
-import weatherChartAll_b from "../../Component/weatherChartAll_b";
-import weatherChartAll_yuan from "../../Component/weatherChartAll_yuan";
-import weatherChart from "../../Component/weatherChart";
+import WeatherChartAll_b from "../../Component/weatherChartAll_b";
+import Line from "../../Component/line";
+import WeatherChartAll_yuan from "../../Component/weatherChartAll_yuan";
+
 
 const { width, height } = Dimensions.get('window');
 
 export default class HomeIndex extends Component<Props> {
     constructor(props, context) {
         super(props, context);
-
         this.state = {
-
         };
-
-
     }
     _handlePress() {
         alert('Pressed!');
     }
-
 
     topIndicatorRender(pulling, pullok, pullrelease) {
         const hide = {position: 'absolute', left: 10000};
@@ -70,7 +66,7 @@ export default class HomeIndex extends Component<Props> {
                 windowHeight={350}
                 header={(
                     <View style={[styles.header,styles.CarouselExample,{marginTop:10, }]}>
-                        <CarouselExample />
+                        <CarouselExample/>
                     </View>
                 )}>
 
@@ -95,14 +91,7 @@ export default class HomeIndex extends Component<Props> {
                     </View>
 
                 </View>
-                <View>
-                    <View style={{height:6,backgroundColor:'#EAEAEA'}}>
-                        <View style={{height:1,backgroundColor:'#D2D2D2'}}>
-                        </View>
-                    </View>
-                    <View style={{height:1,backgroundColor:'#E5E5E5'}}>
-                    </View>
-                </View>
+               <Line/>
                 <View style={{backgroundColor: '#EEEEEE'}}>
 
                     <View style={{flexDirection:'row',paddingTop:20,paddingLeft:15,paddingRight:15}}>
@@ -213,7 +202,7 @@ export default class HomeIndex extends Component<Props> {
                         {/*右边*/}
                         <View style={{flexDirection:'row',height:60, alignItems: 'center' }}>
                             <View>
-                                <Text style={{color:'#405363',fontSize:13}}>于诚</Text>
+                                <Text style={{color:'#405363',fontSize:13}}>于诚，img</Text>
                                 <Text style={{color:'#405363',fontSize:12}}>"我就是我不一样的烟火"</Text>
                                 <Text style={{color:'#AEBFCD',fontSize:11}}>500</Text>
                             </View>
@@ -221,54 +210,35 @@ export default class HomeIndex extends Component<Props> {
                     </View>
 
                     {/*天气图表*/}
-                    <View>
-                        <View style={{height:6,backgroundColor:'#EAEAEA'}}>
-                            <View style={{height:1,backgroundColor:'#D2D2D2'}}>
-                            </View>
-                        </View>
-                        <View style={{height:1,backgroundColor:'#E5E5E5'}}>
-                        </View>
-                    </View>
+                    <Line/>
                     {/*两个图表*/}
                     <View style={{height:160,flexDirection:'row',}}>
                         <View style={{height:160,flex:1,paddingTop:15,alignItems:'center',justifyContent:'center'}}>
-                            <weatherChartAll_b/>
+
+                                <WeatherChart/>
+
                         </View>
                         <View style={[ {height:160,flex:1, alignItems:'center',justifyContent:'center',paddingTop:15}]}>
-                            <weatherChartAll_b/>
+                            <WeatherChart/>
                         </View>
                     </View>
 
-                    <View>
-                        <View style={{height:6,backgroundColor:'#EAEAEA'}}>
-                            <View style={{height:1,backgroundColor:'#D2D2D2'}}>
-                            </View>
-                        </View>
-                        <View style={{height:1,backgroundColor:'#E5E5E5'}}>
-                        </View>
-                    </View>
+                    <Line/>
 
                     <View style={{height:160,flexDirection:'row',}}>
                         <View style={{height:160,flex:1,paddingTop:15,alignItems:'center',justifyContent:'center'}}>
-                            <weatherChartAll_yuan/>
+                            <WeatherChartAll_yuan/>
                         </View>
                         <View style={[ {height:160,flex:1, alignItems:'center',justifyContent:'center',paddingTop:15}]}>
-                            <weatherChartAll_yuan/>
+                            <WeatherChartAll_yuan/>
                         </View>
                     </View>
 
-                    <View>
-                        <View style={{height:6,backgroundColor:'#EAEAEA'}}>
-                            <View style={{height:1,backgroundColor:'#D2D2D2'}}>
-                            </View>
-                        </View>
-                        <View style={{height:1,backgroundColor:'#E5E5E5'}}>
-                        </View>
-                    </View>
+                    <Line/>
 
                     <View style={{height:160,flexDirection:'row',}}>
                         <View style={{height:160,flex:1,paddingTop:15,alignItems:'center',justifyContent:'center'}}>
-                            <weatherChart/>
+                            <WeatherChartAll_b/>
                         </View>
                     </View>
                     <View>
