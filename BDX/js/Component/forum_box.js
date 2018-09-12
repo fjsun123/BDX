@@ -10,12 +10,12 @@ import {
 } from 'react-native';
 
 
-export default class forum_box extends Component<Props> {
+export default class Forum_box extends Component<Props> {
     render() {
         return (
             <View>
                 <Text>
-                    LoninIndex
+                    LoninIndexaxdasd
                 </Text>
             </View>
         );
